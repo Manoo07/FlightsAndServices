@@ -42,6 +42,16 @@ class CityRepository {
             throw {err};
         }
     }
+    async getAll(){
+        try{
+            const city = await City.findAll();
+            return city;
+        }
+        catch(err){
+            console.log('Error in deleteCity :');
+            throw {err};
+        }
+    }
 
     async updateCity(cityId,data){
         try{
