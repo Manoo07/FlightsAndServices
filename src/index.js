@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(urlencoded({extended:true}));
 const SetUpAndStartServer = async ()=>{
     const app = express();
-    app.listen(PORT ,()=>{
+    app.listen(PORT ,async ()=>{
         console.log(`Server started at :${PORT}`);
         const repo = new CityRepository();
         // repo.createCity({name:'New delhi'});
